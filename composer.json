@@ -1,0 +1,32 @@
+{
+    "name": "carloschnouda1/laravel-newsletter-subscriptions",
+    "description": "Simple newsletter subscription package for Laravel with double opt-in confirmation and unsubscribe handling.",
+    "keywords": ["laravel", "newsletter", "subscription", "mailing-list"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Carlos Chnouda"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "illuminate/support": "^10.0|^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Carloschnouda1\\Newsletter\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Carloschnouda1\\Newsletter\\NewsletterServiceProvider"
+            ],
+            "aliases": {
+                "Newsletter": "Carloschnouda1\\Newsletter\\Facades\\Newsletter"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
