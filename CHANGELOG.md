@@ -16,8 +16,8 @@ First tagged release.
 - `Newsletter` facade: `subscribe`, `confirm`, `unsubscribe`, `isSubscribed`, `unsubscribeUrl`
 - `middleware` config option (defaults to `['web']`) so the routes get sessions and CSRF protection
 - Pest test suite built on Orchestra Testbench
-- GitHub Actions workflow testing PHP 8.2 and 8.3 against Laravel 10, 11 and 12
-- Laravel 12 support
+- GitHub Actions workflow testing PHP 8.2 and 8.3 against Laravel 11 and 12
+- Laravel 12 support (Laravel 10 is end-of-life and not supported; PHP 8.2 or higher is required)
 
 ### Changed
 

@@ -15,10 +15,8 @@ jobs:
       fail-fast: false
       matrix:
         php: ['8.2', '8.3']
-        laravel: ['10.*', '11.*', '12.*']
+        laravel: ['11.*', '12.*']
         include:
-          - laravel: 10.*
-            testbench: 8.*
           - laravel: 11.*
             testbench: 9.*
           - laravel: 12.*
@@ -36,6 +34,11 @@ jobs:
           coverage: none
 
       - name: Install dependencies
+        env:
+          # Every Laravel 11 release is now flagged by security advisories, which makes
+          # Composer refuse to install it. We still test compatibility with 11, so allow
+          # it for this CI install only. Consumers' own installs are unaffected.
+          COMPOSER_NO_SECURITY_BLOCKING: ${{ matrix.laravel == '11.*' && '1' || '0' }}
         run: |
           composer require "laravel/framework:${{ matrix.laravel }}" "orchestra/testbench:${{ matrix.testbench }}" --no-interaction --no-update
           composer update --prefer-stable --prefer-dist --no-interaction
