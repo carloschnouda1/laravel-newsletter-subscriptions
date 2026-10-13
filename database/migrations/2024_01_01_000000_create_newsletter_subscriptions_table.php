@@ -11,7 +11,7 @@ return new class extends Migration
         Schema::create('newsletter_subscriptions', function (Blueprint $table) {
             $table->id();
             $table->string('email')->unique();
-            $table->string('token', 64)->nullable();
+            $table->string('token', 64)->nullable()->index();
             $table->timestamp('confirmed_at')->nullable();
             $table->timestamp('unsubscribed_at')->nullable();
             $table->timestamps();
