@@ -1,6 +1,8 @@
 # Laravel Newsletter Subscriptions
 
 [![tests](https://github.com/carloschnouda1/laravel-newsletter-subscriptions/actions/workflows/tests.yml/badge.svg)](https://github.com/carloschnouda1/laravel-newsletter-subscriptions/actions/workflows/tests.yml)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/carloschnouda1/laravel-newsletter-subscriptions.svg)](https://packagist.org/packages/carloschnouda1/laravel-newsletter-subscriptions)
+[![Total Downloads](https://img.shields.io/packagist/dt/carloschnouda1/laravel-newsletter-subscriptions.svg)](https://packagist.org/packages/carloschnouda1/laravel-newsletter-subscriptions)
 [![license](https://img.shields.io/github/license/carloschnouda1/laravel-newsletter-subscriptions)](LICENSE)
 
 A lightweight newsletter subscription package for Laravel with double opt-in confirmation and signed unsubscribe links. No queues, no external services required: just a table, a facade, and three routes.
